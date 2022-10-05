@@ -1,20 +1,28 @@
 <!-- 1. write a program to count letters from given string -->
 <html>
-<head>
-    <title>Count</title>
-</head>
-<link rel="stylesheet" href="style.css">
-<body>
-    Enter any text here : <input  name="string" oninput="count()"/>
-    <div id="demo"></div>
+	<head>
+		<title>Count</title>
+	</head>
+	<link rel="stylesheet" href="style.css" />
+	<body>
+        <main>
+            <div>Enter any text</div>
+            <br>
+            <div>
+                <textarea placeholder="write here" name="string" oninput="count()" ></textarea>
+            </div>
+            <br />
+            <div id="demo"></div>
+        </main>
 
-    <script>
-        const input = document.querySelector("[name=string]");
-        const demo = document.querySelector("#demo");
+		<script>
+			const input = document.querySelector("[name=string]");
+			const demo = document.querySelector("#demo");
 
-        const count = () => {
-            demo.textContent = "Count = "+input["value"].length;
-        }
-    </script>
-</body>
+			const count = () => {
+				if (input["value"].length) demo.textContent = "Count = " + input["value"].length;
+				else demo.textContent = "";
+			};
+		</script>
+	</body>
 </html>
