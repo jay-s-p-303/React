@@ -1,0 +1,111 @@
+:root {
+	--accent-1: #22225e;
+	--accent-2: #cba85e;
+	--accent-3: #fb7207;
+	--text-color: rgba(0, 0, 0, 0.9);
+	--background: rgb(237, 241, 250);
+}
+* {
+	box-sizing: border-box;
+	transition: 300ms;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: var(--background);
+	height: 100%;
+	width: 100%;
+	display: grid;
+}
+#card {
+	margin: auto;
+	height: calc(40vh + 55vw);
+	width: calc(20vh + 35vw);
+	border: calc(0.4vw + 0.4vh) solid var(--accent-2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+#card::after {
+	content: "";
+	border-top: calc(0.2vh + 0.2vw) solid var(--accent-2);
+	z-index: -1;
+	display: block;
+	bottom: 0;
+	height: calc(0.5vh + 0.5vw);
+	width: inherit;
+	background-color: var(--accent-1);
+}
+#card::before {
+	content: "";
+	border-bottom: calc(0.2vh + 0.2vw) solid var(--accent-2);
+	z-index: -1;
+	display: block;
+	bottom: 0;
+	height: calc(0.5vh + 0.5vw);
+	width: inherit;
+	background-color: var(--accent-1);
+}
+#mainContainer {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#headerContainer {
+	display: flex;
+	justify-content: center;
+	font-weight: 500;
+	margin: 1em 0 0 0;
+}
+#cardLogo {
+	height: initial;
+	height: 10vh;
+	margin: 0 1em 0 0;
+}
+#headerContainer > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#headerContainer > div > p {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	color: var(--text-color);
+}
+#studentImage {
+	width: calc(8vh + 8vw);
+	box-shadow: 0 0 10px 10px (--accent-1);
+	border-radius: 70px;
+	margin: 2em 0 0 0;
+}
+#detailsContainer {
+	flex: 1;
+	display: grid;
+}
+#detailsContainer > table {
+	margin: auto;
+	border-collapse: separate;
+	border-spacing: 0.3em;
+	font-weight: 500;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	/* border: 1px solid red; */
+}
+#detailsContainer > table td {
+	font-size: calc(1vh + 1.5vw);
+	padding: 5px 10px;
+}
+@media only screen and (min-width: 768px) {
+	#card {
+		height: calc(45vh + 25vw);
+		width: calc(20vh + 20vw);
+	}
+	#detailsContainer > table td {
+		font-size: calc(1vh + 0.8vw);
+	}
+	#detailsContainer > table {
+		border-spacing: 1em;
+	}
+}

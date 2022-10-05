@@ -1,0 +1,34 @@
+[
+	{
+		"name": "Jay Parmar",
+		"image_url": "https://cms.atmiya.edu.in/images/Stud_Photo/15110621090.JPG",
+		"enrollment_no": 211002028,
+		"reg_no": 15110621090,
+		"dob": "11-11-2002",
+		"mobile": 9723430561
+	},
+	{
+		"name": "Harshad Sorthiya",
+		"image_url": "https://cms.atmiya.edu.in/images/Stud_Photo/15110621093.JPG",
+		"enrollment_no": 211432414,
+		"reg_no": 1234567891,
+		"dob": "11-04-2003",
+		"mobile": 1937402749
+	},
+	{
+		"name": "Tathya Shukla",
+		"image_url": "https://cms.atmiya.edu.in/images/Stud_Photo/15110621016.JPG",
+		"enrollment_no": 211583895,
+		"reg_no": 1234567892,
+		"dob": "20-12-2000",
+		"mobile": 5245552345
+	},
+	{
+		"name": "Chaitali Joshi",
+		"image_url": "https://cdn-icons-png.flaticon.com/512/201/201634.png",
+		"enrollment_no": 211321491,
+		"reg_no": 1234567893,
+		"dob": "01-01-2001",
+		"mobile": 2534523452
+	}
+]

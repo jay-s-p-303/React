@@ -1,0 +1,12 @@
+* {
+	font-family: cursive;
+}
+body {
+	background-color: rgb(191, 190, 210);
+}
+input {
+	background-color: #ebe5ff;
+	border: 3px solid #9f97c5;
+	padding: 0.5em;
+	border-radius: 0.8em;
+}

@@ -1,0 +1,71 @@
+<!-- create a class with account holder name and balance with getter and setter method -->
+<html>
+	<head>
+		<title>Bank Program</title>
+		<link rel="stylesheet" href="style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Bank program</h1>
+
+		<div class="box">
+			<span id="main"></span>
+			<span>
+				<button onclick="display()">Display balance</button>
+			</span>
+			<span>
+				<h3>Debit balance</h3>
+				<input name="debitAmount" placeholder="enter amount here" type="number" /><br /><br />
+				<button onclick="debit()">Debit balance</button>
+			</span>
+			<span>
+				<h3>Credit balance</h3>
+				<input name="creditAmount" placeholder="enter amount here" type="number" /><br /><br />
+				<button onclick="credit()">Credit balance</button>
+			</span>
+		</div>
+
+		<script src="Account.js"></script>
+		<script>
+			const isNumber = (x) => typeof Number(x) === "number" && isFinite(Number(x));
+			const errMsg = "<h1>Please refresh the page, <br>and Enter amount more then 3000rs</h1>";
+			let acc = null;
+
+			let choice = new Promise((resolve, reject) => {
+				let x = prompt("Enter balance more than 3000 : ");
+
+				if ((x == null) | !isNumber(x) | x<3000) reject();
+
+				resolve(x);
+			});
+			choice
+				.then((amount) => {
+					acc = new Account("name", amount);
+				})
+				.catch((error) => {
+					document.body.innerHTML = errMsg;
+				});
+
+			const main = document.getElementById("main");
+			
+			const display = () => {
+				message("Balance = "+acc.getBalance());
+			};
+			const debit = () => {
+				acc.deposit(Number(document.querySelector("[name=debitAmount]").value));
+				message("Money deposit successfully");
+			};
+			const credit = () => {
+				acc.withdrawal(Number(document.querySelector("[name=creditAmount]").value));
+				message("Money credited successfully");
+			};
+			message = (msg) =>
+			{
+				main.innerHTML = "";
+				setTimeout(()=>{
+					main.innerHTML = msg;
+				},300)
+			}
+		</script>
+	</body>
+</html>

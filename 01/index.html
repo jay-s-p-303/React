@@ -1,0 +1,20 @@
+<!-- 1. write a program to count letters from given string -->
+<html>
+<head>
+    <title>Count</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    Enter any text here : <input  name="string" oninput="count()"/>
+    <div id="demo"></div>
+
+    <script>
+        const input = document.querySelector("[name=string]");
+        const demo = document.querySelector("#demo");
+
+        const count = () => {
+            demo.textContent = "Count = "+input["value"].length;
+        }
+    </script>
+</body>
+</html>
