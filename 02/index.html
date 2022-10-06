@@ -11,61 +11,29 @@
 		<div class="box">
 			<span id="main"></span>
 			<span>
-				<button onclick="display()">Display balance</button>
+				<button onclick="displayName()">Display name</button>
+			</span>
+			<span>
+				<button onclick="displayBalance()">Display balance</button>
+			</span>
+			<span>
+				<h3>Change name</h3>
+				<input name="nameInput" placeholder="enter your name here" type="text" /><br /><br />
+				<button onclick="changeName()">Debit balance</button>
 			</span>
 			<span>
 				<h3>Debit balance</h3>
 				<input name="debitAmount" placeholder="enter amount here" type="number" /><br /><br />
-				<button onclick="debit()">Debit balance</button>
+				<button onclick="debitBalance()">Debit balance</button>
 			</span>
 			<span>
 				<h3>Credit balance</h3>
 				<input name="creditAmount" placeholder="enter amount here" type="number" /><br /><br />
-				<button onclick="credit()">Credit balance</button>
+				<button onclick="creditBalance()">Credit balance</button>
 			</span>
 		</div>
 
 		<script src="Account.js"></script>
-		<script>
-			const isNumber = (x) => typeof Number(x) === "number" && isFinite(Number(x));
-			const errMsg = "<h1>Please refresh the page, <br>and Enter amount more then 3000rs</h1>";
-			let acc = null;
-
-			let choice = new Promise((resolve, reject) => {
-				let x = prompt("Enter balance more than 3000 : ");
-
-				if ((x == null) | !isNumber(x) | x<3000) reject();
-
-				resolve(x);
-			});
-			choice
-				.then((amount) => {
-					acc = new Account("name", amount);
-				})
-				.catch((error) => {
-					document.body.innerHTML = errMsg;
-				});
-
-			const main = document.getElementById("main");
-			
-			const display = () => {
-				message("Balance = "+acc.getBalance());
-			};
-			const debit = () => {
-				acc.deposit(Number(document.querySelector("[name=debitAmount]").value));
-				message("Money deposit successfully");
-			};
-			const credit = () => {
-				acc.withdrawal(Number(document.querySelector("[name=creditAmount]").value));
-				message("Money credited successfully");
-			};
-			message = (msg) =>
-			{
-				main.innerHTML = "";
-				setTimeout(()=>{
-					main.innerHTML = msg;
-				},300)
-			}
-		</script>
+		<script src="sript.js"></script>
 	</body>
 </html>
