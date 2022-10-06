@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Bank Program</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet" />
 	</head>
@@ -19,17 +20,13 @@
 			<span>
 				<h3>Change name</h3>
 				<input name="nameInput" placeholder="enter your name here" type="text" /><br /><br />
-				<button onclick="changeName()">Debit balance</button>
+				<button onclick="changeName()">Submit</button>
 			</span>
 			<span>
 				<h3>Debit balance</h3>
-				<input name="debitAmount" placeholder="enter amount here" type="number" /><br /><br />
-				<button onclick="debitBalance()">Debit balance</button>
-			</span>
-			<span>
-				<h3>Credit balance</h3>
-				<input name="creditAmount" placeholder="enter amount here" type="number" /><br /><br />
-				<button onclick="creditBalance()">Credit balance</button>
+				<input name="amount" placeholder="enter amount here" type="number" /><br /><br />
+				<button onclick="debitBalance()">Credit balance</button> <br> <br>
+				<button onclick="creditBalance()">Debit balance</button>
 			</span>
 		</div>
 

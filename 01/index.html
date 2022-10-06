@@ -3,17 +3,18 @@
 	<head>
 		<title>Count</title>
 	</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="style.css" />
 	<body>
-        <main>
-            <div>Enter any text</div>
-            <br>
-            <div>
-                <textarea placeholder="write here" name="string" oninput="count()" ></textarea>
-            </div>
-            <br />
-            <div id="demo"></div>
-        </main>
+		<main>
+			<p>Enter your text :-</p>
+			<br />
+			<div>
+				<textarea placeholder="write here" name="string" oninput="count()"></textarea>
+			</div>
+			<br />
+			<div id="demo"></div>
+		</main>
 
 		<script>
 			const input = document.querySelector("[name=string]");

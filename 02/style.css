@@ -1,10 +1,9 @@
 * {
 	font-family: sans-serif;
 	box-sizing: border-box;
-	color: #303033;
-	transition: 0.2s;
+	transition: 100ms;
 }
-h1{
+h1 {
 	text-align: center;
 	font-family: Aladin;
 	font-weight: 1;
@@ -13,23 +12,29 @@ h1{
 body {
 	background-color: rgb(224, 224, 234);
 }
-.box{
+.box {
 	display: flex;
 	flex-wrap: wrap;
 }
-.box > span:not(:empty)	{
+.box > span:not(:empty) {
 	background-color: rgba(101, 101, 204, 0.1);
-	padding: 10px;
+	padding: 20px;
 	margin: 10px;
 	border-radius: 10px;
 	flex: auto;
-	
-	/* border: 1px solid red; */
 }
-.box > span:nth-child(2)
-{
-	text-align: center;
+.box > span:nth-child(1){
+	font-family: cursive;
+	color: #000;
+	font-size: x-large;
+}
+.box > span:nth-child(2),
+.box > span:nth-child(3) {
 	width: 100%;
+	text-align: center;
+} 
+.box span{
+	color: #828693;
 }
 input {
 	background-color: #f4f2f7;
@@ -39,7 +44,6 @@ input {
 	width: 13em;
 	font-size: medium;
 	min-width: 1em;
-	/* width: 100%; */
 	border-radius: 0.4em;
 }
 button {
@@ -52,11 +56,10 @@ button {
 	font-weight: 600;
 	box-shadow: 0px 0px 5px rgba(125, 3, 255, 0.224);
 }
-button:hover{
+button:hover {
 	box-shadow: 0px 3px 10px rgba(125, 3, 255, 0.3);
 }
-button:active
-{
+button:active {
 	transform: scale(0.97);
 	box-shadow: 0px 0px 10px rgba(125, 3, 255, 0.224);
 	background-color: rgba(125, 3, 255, 0.2);
